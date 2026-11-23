@@ -3,25 +3,48 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
+  --background: 1 0 0;
+  --foreground: 0.24 0.05 262;
+  --card: 1 0 0;
+  --card-foreground: 0.24 0.05 262;
+  --popover: 1 0 0;
+  --popover-foreground: 0.24 0.05 262;
+  --primary: 0.52 0.21 262;
+  --primary-foreground: 0.99 0 0;
+  --secondary: 0.965 0.018 255;
+  --secondary-foreground: 0.36 0.12 262;
+  --muted: 0.975 0.008 255;
+  --muted-foreground: 0.5 0.03 260;
+  --accent: 0.72 0.18 50;
+  --accent-foreground: 0.99 0 0;
+  --highlight: 0.88 0.16 88;
+  --highlight-foreground: 0.3 0.06 70;
+  --destructive: 0.577 0.245 27.325;
+  --border: 0.92 0.015 255;
+  --input: 0.92 0.015 255;
+  --ring: 0.52 0.21 262;
+  --chart-1: 0.52 0.21 262;
+  --chart-2: 0.72 0.18 50;
+  --chart-3: 0.88 0.16 88;
+  --chart-4: 0.7 0.12 240;
+  --chart-5: 0.36 0.12 262;
+  --radius: 0.875rem;
+  --sidebar: 0.985 0.006 255;
+  --sidebar-foreground: 0.24 0.05 262;
+  --sidebar-primary: 0.52 0.21 262;
+  --sidebar-primary-foreground: 0.99 0 0;
+  --sidebar-accent: 0.955 0.025 255;
+  --sidebar-accent-foreground: 0.36 0.12 262;
+  --sidebar-border: 0.92 0.015 255;
+  --sidebar-ring: 0.52 0.21 262;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    @apply border-border;
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  body {
+    @apply bg-background text-foreground font-sans;
   }
 }
